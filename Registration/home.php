@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="style.css"> 
 
 <body>
-<div class="wrapper split left" style="background-image: url('https://i2.wp.com/files.123freevectors.com/wp-content/original/171786-dark-pink-fluid-gradient-geometric-abstract-background.jpg?w=800&q=95');">
+<div class="wrapper split left">
     <div class="inner">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
             <h3>Register Now</h3>
             <div class="form-group">
                 <div class="form-wrapper">
@@ -48,30 +48,31 @@
                 <input type="number" class="form-control" name="ssn"  value="<?php echo $ssn; ?>">
                 <span class="error"><?php echo $ssn_error; ?></span>
             </div>
-            <button type="submit">Register Now</button>
+            <button type="submit" name="register">Register Now</button>
             <div class="success"><?php echo $success; ?></div>
         </form>
     </div>
 </div>
-<div class="wrapper split right" style="background-image: url('https://image.freepik.com/free-vector/dark-wavy-background-gradient_23-2148385755.jpg');">
+<div class="wrapper split right">
     <div class="inner">
-        <form action="">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
             <h3>Log In</h3>
             <div class="form-group">
                 <div class="form-wrapper">
                     <label for="">Username</label>
-                    <input type="text" class="form-control" name="existuser">
+                    <input type="text" class="form-control" name="existUser" value="<?php echo $existUser; ?>">
+                    <span class="error"><?php echo $existUser_error; ?></span>
                 </div>
             </div>
             <div class="form-wrapper">
                 <label for="">Password</label>
-                <input type="password" class="form-control" name="existpass">
+                <input type="password" class="form-control" name="existPass" value="<?php echo $existPass; ?>">
+                <span class="error"><?php echo $existPass_error; ?></span>
             </div>
-            <button>Login Now</button>
+            <button type="submit" name="login">Login Now</button>
         </form>
     </div>
 </div>
 </body>
-
 
 

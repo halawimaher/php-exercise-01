@@ -1,13 +1,17 @@
   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  
+    box-sizing: border-box;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
   body {
     font-family: "Muli-Regular";
     font-size: 13px;
     color: #666;
-    margin: 0; 
+    margin: 0;
+     
 }
 .error{
   color: red;
@@ -21,8 +25,8 @@
   
   input, textarea, select, button {
     font-family: "Muli-Regular";
-    color: #333;
-    font-size: 13px;
+    color: white;
+    font-size: 15px;
   }
   
   p, h1, h2, h3, h4, h5, h6, ul {
@@ -53,6 +57,7 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center; 
+    background-image: url('https://i.imgur.com/93rbsdJ_d.webp?maxwidth=728&fidelity=grand');
 }
   
   .inner {
@@ -93,9 +98,13 @@
       margin-bottom: 9px;
       display: block; 
     }
+
+    label{
+      color: black;
+    }
   
   .form-control {
-    border: 1px solid #ccc;
+    border: 1px solid black;
     display: block;
     width: 100%;
     height: 40px;
