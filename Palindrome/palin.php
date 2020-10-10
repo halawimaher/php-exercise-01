@@ -11,7 +11,7 @@
 $output = '';
 if (isset($_POST['submit'])){ //when login button is pressed
     $text = $_POST["text"];
-    $sample = str_replace(' ', '', $text);
+    $sample = strtolower(str_replace(' ', '', $text));
     function palindrome($phrase){
         $phrase_len = strlen($phrase) -1;
         $output= "";
@@ -19,6 +19,7 @@ if (isset($_POST['submit'])){ //when login button is pressed
         for($i = $phrase_len; $i>=0; $i--){
             $output .= $phrase[$i];
         }
+            
         if($output == $phrase){
         $output = "Palindrome"; //print out First Name: + name input
         echo $output;
